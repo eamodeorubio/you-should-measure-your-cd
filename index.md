@@ -267,3 +267,5 @@
 * `CFR = (#incidents + #defects) / #deployments`
 * `MTTR = sum(incidents duration, defects duration) / (#incidents + #defects)`
 
+
+## Time for questions?
