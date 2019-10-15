@@ -30,14 +30,14 @@
 * Rinse and repeat!
 
 
-### But, how do you know that the team has problems?
+### But, how do you know whether the team has problems?
 
 
 ### Maybe gut feeling?
 #### That may work sometimes
 
 
-### Did the situation got <span class="good">better</span> or <span class="bad">worse</span> after implementing the actions from the retro?
+### Got the situation <span class="good">better</span> or <span class="bad">worse</span> after implementing the actions from the retro?
 
 
 ### Gut feeling again?
@@ -78,36 +78,42 @@
 
 * How many code changes does a <em>team</em> deliver by unit of time?
   * Team is the unit of organization and not individual engineers
-  * Code change `->` Successful <em>production</em> deployment
+  * Code change `->` Either source code or config changes
+  * Delivered `->` Successful <em>production</em> deployment
 * The higher the better
 
 
 ### Why increase deployment frequency?
 
-* Probably code changes are smaller `->` Flow
-* Less risk in a change
-* Easier to debug a potential problem
-* Cheaper to change plans `->` less work to throw away
-* More predictable delivery
+* Frequent changes `->` early production problem detection
+* Probably code changes are smaller
+  * Smaller changes `->` smaller problems
+  * Easier to debug a potential problem
+* Cheaper to change plans, less work to throw away
+* More predictable delivery process
 
 
 ### Code delivery time (CDT)
 #### Is the team fast?
 
 * Time from <em>local code commit</em> to successful deployment on <em>production</em>
-  * Code is the outcome of our work
-  * Includes any review ceremony, build and testing, manual approvals, etc.
-  * Code could be also a config change following modern DevOps practices
+* Includes any review ceremony, build and testing, manual approvals, etc.
 * The lower the better
 
 
 ### Why decrease code delivery time?
 
 * The lower the <em>faster</em> we put changes into production!
-* Better and faster automation
-* Less <span class="bad">waiting/iddle</span> time
+* Will often increase deployment frequency
 * Faster reaction time
-* A sign of a <span class="good">healthy</span> code base
+
+
+### Decreasing code delivery time
+
+* Better and faster automation
+* More efficient team ceremonies/practices `->` Less <span class="bad">waiting/iddle</span> time
+* A <span class="good">healthy</span> code base is easier and faster to change
+* Working in small batches/changes
 
 
 ### Change Failure Ratio (CFR)
@@ -117,16 +123,38 @@
 * The lower the better
 
 
+### Decreasing change failure ratio
+
+* Meaningful testing practices
+* Better code reviews
+* Better "linting"
+
+
 ### Mean time to restore (MTTR)
 #### Are we fast fixing problems?
 
 * Time from defect/incident detected to fix/resolution
-* The lower the cheaper a problem is (less risky)!
+* The lower the <em>cheaper</em> a problem is (less risky)!
 * We can be more aggressive with shorter MTTR
 * Caution: actual cost/risk depends on severity and impact of each problem
 
 
-## Once you have data we can start talking seriously
+### Decreasing mean time to restore
+
+* Better telemetry and alert
+* Better observability (easier to diagnose)
+* Being able to do canary deployments, blue/green deployments
+* By decreasing also code lead time
+* Healthy code base (where is the bug? how to fix it?)
+
+
+## Data leads to more focused and useful conversations
+
+* Is it good enough?
+* Is it getting better or worse?
+* Why do we have these metrics?
+* How can we improve them?
+* What did we do to improve (or make it worse)?
 
 
 ## We <span class="good">decreased</span> code delivery time by 20% but the change failure ratio <span class="bad">increased</span> by 50%!
@@ -145,15 +173,17 @@
 #### Tech debt relates to metrics with high variance?
 
 
-## Tech debt `->` lottery
+## The `rabbit hole` effect
+#### When tech debt starts to show
 
-* The `rabbit hole` effect
-* Tech debt makes hard to predict if changes are needed
-  * A healthy part of the system? `->` Won the lottery!
-  * An unhealty part of the system? `->` Lost the lottery!
+* No simple mapping feature change `->` code sections to change
+* A simple feature change could be hard (bad luck)
+* Or a complex one could by chance be easy (we got lucky)
+* Most of the times a mixed situation
 
 
-## Advise
+## Metric goals?
+#### Avoid raw data obsession
 
 * Aim first for <em>consistency</em> (low variability)
 * Then achieve a trend of <em>continous improvement</em> for the metrics
@@ -167,7 +197,7 @@
 ### Not using webhooks
 
 * Mostly at most once semantics `->` losing data points
-* Not all systems have webhooks
+* Most important, <em>not all</em> the systems have webhooks
 
 
 ### Cron jobs!
@@ -259,7 +289,7 @@
 * Trace customer issues:
   * Customer reported issue and resolution dates labeled as bugs
   * Commit labeled with customer issue
-* For rollbacks we could know which changeset are we rolling back
+* For rollbacks we could know to which changeset are we rolling back
 
 
 ### Measuring quality
