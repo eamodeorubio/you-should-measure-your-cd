@@ -7,7 +7,7 @@
 
 
 ### Agile is about <em>inspect</em> and <em>adapt</em>,
-### about <em>continuous enhancenment</em>
+### about <em>continuous improvement</em>
 
 
 ### Inspect and adapt is done mostly through <em>retros</em>
@@ -21,7 +21,7 @@
 * No review of last actions results
 
 
-### <em>Continuous enhancement</em>
+### <em>Continuous improvement</em>
 
 * Find problems
 * Make hypothesis about problem root cause
@@ -156,7 +156,7 @@
 ## Advise
 
 * Aim first for <em>consistency</em> (low variability)
-* Then achieve a trend of <em>continous enhancement</em> for the metrics
+* Then achieve a trend of <em>continous improvement</em> for the metrics
 * A bad number is ok if we are getting better and better
 * A good number is bad is we are getting worse and worse
 
